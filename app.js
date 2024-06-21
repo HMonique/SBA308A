@@ -21,6 +21,12 @@ async function sortByBreed(breed) {
   if (breed != "Choose a breed") {
     const response = await fetch(`https://dog.ceo/api/breed/${breed}/images`)
     const data = await response.json()
-    console.log(data)
+    createSlideShow(data.message)
   }
+}
+
+function createSlideShow(images) {
+    document.getElementById("slideshow").innerHTML = ` 
+    <div class="slide" style="background-image: url('${images[0]}');"></div>
+    `
 }
