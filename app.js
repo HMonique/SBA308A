@@ -13,8 +13,8 @@ function makeBreedList(dogList){
        ${Object.keys(dogList).map(function (breed) {
           return `<option>${breed}</option>`
        }).join('')}
-    </select>
-    `
+     </select>
+  `
 }
 
 async function sortByBreed(breed) {
